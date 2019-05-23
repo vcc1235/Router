@@ -35,6 +35,7 @@
 		B823C21F22966C2000F5AEBC /* AFThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFThemeManager.m; sourceTree = "<group>"; };
 		B823C22122966FA400F5AEBC /* AFBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFBundleManager.h; sourceTree = "<group>"; };
 		B823C22222966FA400F5AEBC /* AFBundleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFBundleManager.m; sourceTree = "<group>"; };
+		B823C22422967E1E00F5AEBC /* Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 				B823C2012296696B00F5AEBC /* AppDelegate.m */,
 				B823C2032296696B00F5AEBC /* ViewController.h */,
 				B823C2042296696B00F5AEBC /* ViewController.m */,
+				B823C22422967E1E00F5AEBC /* Router.h */,
 				B823C21A229669C800F5AEBC /* Theme */,
 				B823C219229669C000F5AEBC /* Router */,
 				B823C2062296696B00F5AEBC /* Main.storyboard */,
