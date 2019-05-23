@@ -81,9 +81,11 @@
         objc_property_t property = properties[i];
         const char * name = property_getName(property);//获取属性名字
         NSString *key = [NSString stringWithUTF8String:name];
-        NSString *value = [self.vc_themeDictionary objectForKey:key];
-        UIColor *color = [self.class colorWithHexString:value];
-        [self setValue:color forKey:key];
+        if ([self.vc_themeDictionary.allKeys containsObject:key]) {
+            NSString *value = [self.vc_themeDictionary objectForKey:key];
+            UIColor *color = [self.class colorWithHexString:value];
+            [self setValue:color forKey:key];
+        }
     }
 }
 /// 16进制转颜色值
