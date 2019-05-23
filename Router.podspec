@@ -116,7 +116,7 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  path = 'Router/Router' 
+  path = 'Router/Router/' 
 
   s.subspec 'Theme' do |ss|
   	ss.source_files = path + 'Theme/AF{.h,.m}'
@@ -141,7 +141,8 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
   # spec.requires_arc = true
-
+	s.requires_arc = true
+    s.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
