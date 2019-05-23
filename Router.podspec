@@ -120,7 +120,7 @@ Pod::Spec.new do |spec|
   # path = 'Router/Router/' 
 
   spec.subspec 'Theme' do |ss|
-  	ss.source_files = 'Router/Router/' + 'Theme/AF*{.h,.m}'
+  	ss.source_files = 'Router/Router/' + 'Theme/*{.h,.m}'
   end
 
   spec.subspec 'Router' do |ss|

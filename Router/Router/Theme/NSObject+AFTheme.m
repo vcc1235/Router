@@ -1,53 +1,76 @@
 //
-//  AFThemeManager.m
-//  Common
+//  NSObject+AFTheme.m
+//  Router
 //
-//  Created by alete on 2019/3/27.
+//  Created by alete on 2019/5/23.
 //  Copyright © 2019 aletevcc. All rights reserved.
 //
 
-#import "AFThemeManager.h"
+#import "NSObject+AFTheme.h"
+#import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 #define AFThemeString  @"afthemeManager"
 
-@interface AFThemeManager ()
+@interface NSObject ()
 
-@property (nonatomic, strong) NSDictionary *json ;
+@property (nonatomic, strong) NSDictionary *vc_json ;
 
-@property (nonatomic, strong) NSDictionary *themeDictionary ;
+@property (nonatomic, strong) NSDictionary *vc_themeDictionary ;
 
 @end
 
-@implementation AFThemeManager
+@implementation NSObject (AFTheme)
+-(NSDictionary *)vc_json{
+    return objc_getAssociatedObject(self, @"vcc_json");
+}
+-(void)setVc_json:(NSDictionary *)vc_json{
+    [self willChangeValueForKey:@"vcc_json"];
+    objc_setAssociatedObject(self, @"vcc_json", vc_json, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self didChangeValueForKey:@"vcc_json"];
+}
 
-+(instancetype)shareInstance{
-    static AFThemeManager *__themeInstance = nil ;
+-(NSDictionary *)vc_themeDictionary{
+    return objc_getAssociatedObject(self, @"vcc_themeDictionary");
+}
+-(void)setVc_themeDictionary:(NSDictionary *)vc_themeDictionary{
+    [self willChangeValueForKey:@"vcc_themeDictionary"];
+    objc_setAssociatedObject(self, @"vcc_themeDictionary", vc_themeDictionary, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self didChangeValueForKey:@"vcc_themeDictionary"];
+}
+
++(instancetype)vc_shareInstance{
+    static NSObject *__themeInstance = nil ;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         __themeInstance = [[self alloc]init];
         NSString *value = [NSUserDefaults.standardUserDefaults objectForKey:AFThemeString];
         if (value == nil) {
-            __themeInstance.style = @"default" ;
+            __themeInstance.vc_style = @"default" ;
         }else{
-            __themeInstance.style = value;
+            __themeInstance.vc_style = value;
         }
     });
     return __themeInstance ;
 }
+-(NSString *)vc_style{
+    return objc_getAssociatedObject(self, @"vcc_style");
+}
 /// 更改key
--(void)setStyle:(NSString *)style{
-    _style = style ;
-    [NSUserDefaults.standardUserDefaults setObject:style forKey:AFThemeString];
-    NSDictionary *dict = [self.json objectForKey:style];
-    self.themeDictionary = dict ;
+-(void)setVc_style:(NSString *)vc_style{
+    [self willChangeValueForKey:@"vcc_style"];
+    objc_setAssociatedObject(self, @"vcc_style", vc_style, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self didChangeValueForKey:@"vcc_style"];
+    [NSUserDefaults.standardUserDefaults setObject:vc_style forKey:AFThemeString];
+    NSDictionary *dict = [self.vc_json objectForKey:vc_style];
+    self.vc_themeDictionary = dict ;
     [self reloadTheme];
 }
 /// 加载文件
--(void)loadLocalJson:(NSString *)json{
+-(void)vc_loadLocalJson:(NSString *)json{
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:json];
-    self.json = dictionary ;
-    NSDictionary *dict = [self.json objectForKey:self.style];
-    self.themeDictionary = dict ;
+    self.vc_json = dictionary ;
+    NSDictionary *dict = [self.vc_json objectForKey:self.vc_style];
+    self.vc_themeDictionary = dict ;
     [self reloadTheme];
 }
 /// 刷新属性值
@@ -58,7 +81,7 @@
         objc_property_t property = properties[i];
         const char * name = property_getName(property);//获取属性名字
         NSString *key = [NSString stringWithUTF8String:name];
-        NSString *value = [self.themeDictionary objectForKey:key];
+        NSString *value = [self.vc_themeDictionary objectForKey:key];
         UIColor *color = [self.class colorWithHexString:value];
         [self setValue:color forKey:key];
     }
@@ -99,5 +122,7 @@
                            alpha:1.0f];
     
 }
+
+
 
 @end

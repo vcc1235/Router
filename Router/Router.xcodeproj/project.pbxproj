@@ -14,8 +14,8 @@
 		B823C20D2296696D00F5AEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B823C20B2296696D00F5AEBC /* LaunchScreen.storyboard */; };
 		B823C2102296696D00F5AEBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C20F2296696D00F5AEBC /* main.m */; };
 		B823C2182296699600F5AEBC /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C2172296699600F5AEBC /* Router.m */; };
-		B823C22022966C2000F5AEBC /* AFThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C21F22966C2000F5AEBC /* AFThemeManager.m */; };
 		B823C22322966FA400F5AEBC /* AFBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C22222966FA400F5AEBC /* AFBundleManager.m */; };
+		B85689B32296965700D5C416 /* NSObject+AFTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = B85689B22296965700D5C416 /* NSObject+AFTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +31,12 @@
 		B823C20F2296696D00F5AEBC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B823C2162296699600F5AEBC /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
 		B823C2172296699600F5AEBC /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Router.m; sourceTree = "<group>"; };
-		B823C21E22966C2000F5AEBC /* AFThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFThemeManager.h; sourceTree = "<group>"; };
-		B823C21F22966C2000F5AEBC /* AFThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFThemeManager.m; sourceTree = "<group>"; };
 		B823C22122966FA400F5AEBC /* AFBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFBundleManager.h; sourceTree = "<group>"; };
 		B823C22222966FA400F5AEBC /* AFBundleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFBundleManager.m; sourceTree = "<group>"; };
 		B823C22422967E1E00F5AEBC /* Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
+		B85689AE229695C400D5C416 /* AFThemeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFThemeDelegate.h; sourceTree = "<group>"; };
+		B85689B12296965700D5C416 /* NSObject+AFTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AFTheme.h"; sourceTree = "<group>"; };
+		B85689B22296965700D5C416 /* NSObject+AFTheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AFTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +97,11 @@
 		B823C21A229669C800F5AEBC /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				B823C21E22966C2000F5AEBC /* AFThemeManager.h */,
-				B823C21F22966C2000F5AEBC /* AFThemeManager.m */,
 				B823C22122966FA400F5AEBC /* AFBundleManager.h */,
 				B823C22222966FA400F5AEBC /* AFBundleManager.m */,
+				B85689AE229695C400D5C416 /* AFThemeDelegate.h */,
+				B85689B12296965700D5C416 /* NSObject+AFTheme.h */,
+				B85689B22296965700D5C416 /* NSObject+AFTheme.m */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -177,8 +179,8 @@
 				B823C22322966FA400F5AEBC /* AFBundleManager.m in Sources */,
 				B823C2182296699600F5AEBC /* Router.m in Sources */,
 				B823C2052296696B00F5AEBC /* ViewController.m in Sources */,
+				B85689B32296965700D5C416 /* NSObject+AFTheme.m in Sources */,
 				B823C2102296696D00F5AEBC /* main.m in Sources */,
-				B823C22022966C2000F5AEBC /* AFThemeManager.m in Sources */,
 				B823C2022296696B00F5AEBC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
