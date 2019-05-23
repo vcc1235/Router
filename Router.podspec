@@ -116,14 +116,14 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  path = 'Router/Router/' 
+  # path = 'Router/Router/' 
 
   s.subspec 'Theme' do |ss|
-  	ss.source_files = path + 'Theme/AF{.h,.m}'
+  	ss.source_files = 'Router/Router/' + 'Theme/AF{.h,.m}'
   end
 
   s.subspec 'Router' do |ss|
-  	ss.source_files = path + 'Router/Router{.h,.m}'
+  	ss.source_files = 'Router/Router/' + 'Router/Router{.h,.m}'
   end
 
 
