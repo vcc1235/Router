@@ -118,11 +118,11 @@ Pod::Spec.new do |spec|
 
   # path = 'Router/Router/' 
 
-  s.subspec 'Theme' do |ss|
+  spec.subspec 'Theme' do |ss|
   	ss.source_files = 'Router/Router/' + 'Theme/AF{.h,.m}'
   end
 
-  s.subspec 'Router' do |ss|
+  spec.subspec 'Router' do |ss|
   	ss.source_files = 'Router/Router/' + 'Router/Router{.h,.m}'
   end
 
@@ -141,8 +141,8 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
   # spec.requires_arc = true
-	s.requires_arc = true
-    s.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
+	spec.requires_arc = true
+    spec.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
