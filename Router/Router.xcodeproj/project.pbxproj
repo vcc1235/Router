@@ -15,7 +15,7 @@
 		B823C2102296696D00F5AEBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C20F2296696D00F5AEBC /* main.m */; };
 		B823C2182296699600F5AEBC /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C2172296699600F5AEBC /* Router.m */; };
 		B823C22322966FA400F5AEBC /* AFBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C22222966FA400F5AEBC /* AFBundleManager.m */; };
-		B85689B32296965700D5C416 /* NSObject+AFTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = B85689B22296965700D5C416 /* NSObject+AFTheme.m */; };
+		B85689B62296A86300D5C416 /* AFColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B85689B52296A86300D5C416 /* AFColorManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,8 @@
 		B823C22122966FA400F5AEBC /* AFBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFBundleManager.h; sourceTree = "<group>"; };
 		B823C22222966FA400F5AEBC /* AFBundleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFBundleManager.m; sourceTree = "<group>"; };
 		B823C22422967E1E00F5AEBC /* Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
-		B85689AE229695C400D5C416 /* AFThemeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFThemeDelegate.h; sourceTree = "<group>"; };
-		B85689B12296965700D5C416 /* NSObject+AFTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AFTheme.h"; sourceTree = "<group>"; };
-		B85689B22296965700D5C416 /* NSObject+AFTheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AFTheme.m"; sourceTree = "<group>"; };
+		B85689B42296A86300D5C416 /* AFColorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFColorManager.h; sourceTree = "<group>"; };
+		B85689B52296A86300D5C416 /* AFColorManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFColorManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +98,8 @@
 			children = (
 				B823C22122966FA400F5AEBC /* AFBundleManager.h */,
 				B823C22222966FA400F5AEBC /* AFBundleManager.m */,
-				B85689AE229695C400D5C416 /* AFThemeDelegate.h */,
-				B85689B12296965700D5C416 /* NSObject+AFTheme.h */,
-				B85689B22296965700D5C416 /* NSObject+AFTheme.m */,
+				B85689B42296A86300D5C416 /* AFColorManager.h */,
+				B85689B52296A86300D5C416 /* AFColorManager.m */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -179,7 +177,7 @@
 				B823C22322966FA400F5AEBC /* AFBundleManager.m in Sources */,
 				B823C2182296699600F5AEBC /* Router.m in Sources */,
 				B823C2052296696B00F5AEBC /* ViewController.m in Sources */,
-				B85689B32296965700D5C416 /* NSObject+AFTheme.m in Sources */,
+				B85689B62296A86300D5C416 /* AFColorManager.m in Sources */,
 				B823C2102296696D00F5AEBC /* main.m in Sources */,
 				B823C2022296696B00F5AEBC /* AppDelegate.m in Sources */,
 			);
