@@ -73,7 +73,7 @@ static Class __className ;
         [querys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([obj containsString:@"="]) {
                 NSRange range = [obj rangeOfString:@"="];
-                NSString *key = [obj substringToIndex:range.location-1];
+                NSString *key = [obj substringToIndex:range.location];
                 NSString *value = [obj substringFromIndex:range.location+1];
                 [param setObject:value forKey:key];
             }
