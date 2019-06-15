@@ -72,8 +72,10 @@ static Class __className ;
         NSArray <NSString *>*querys = [query componentsSeparatedByString:@"&"];
         [querys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([obj containsString:@"="]) {
-                NSArray *keyValue = [obj componentsSeparatedByString:@"="];
-                [param setObject:keyValue.lastObject forKey:keyValue.firstObject];
+                NSRange range = [obj rangeOfString:@"="];
+                NSString *key = [obj substringToIndex:range.location-1];
+                NSString *value = [obj substringFromIndex:range.location+1];
+                [param setObject:value forKey:key];
             }
         }];
     }
