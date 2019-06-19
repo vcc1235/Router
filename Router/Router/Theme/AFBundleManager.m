@@ -80,7 +80,7 @@ static const char *_bundlekey = "_bundle_key";
         }
     }
 }
--(void)setExistenImage:(NSArray<NSString *> *)imageNames{
+-(void)setExensistImageNames:(NSArray<NSString *> *)imageNames{
     self.imageNames = imageNames ;
 }
 #pragma mark - 国际化版本 -
