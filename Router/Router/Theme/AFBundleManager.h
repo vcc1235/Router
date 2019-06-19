@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 图片 -
 @property (nonatomic, strong , readonly) NSString *bundleString ;
 /// 过滤部分图片名
--(void)setExistenImage:(NSArray<NSString *>*)imageNames ;
+-(void)setExensistImageNames:(NSArray<NSString *>*)imageNames ;
 /// 设置图片路径
 -(void)setImageBundle:(NSString *)path ;
 #pragma end
