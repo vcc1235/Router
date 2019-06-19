@@ -8,6 +8,15 @@
 
 #import "AFBundleManager.h"
 #import <objc/runtime.h>
+@interface AFBundleManager ()
+
+@property (nonatomic, strong) NSString *resourceName ;
+@property (nonatomic, assign) NSInteger type ;
+@property (nonatomic, strong ) NSString *bundleString ;
+@property (nonatomic, strong) NSArray <NSString *>*imageNames ;
+
+@end
+
 @interface UIImage (Image)
 
 @end
@@ -25,17 +34,14 @@
 }
 
 +(UIImage *)imageCustomName:(NSString *)name{
+    if (AFBundleManager.shareBundleManager.imageNames && [AFBundleManager.shareBundleManager.imageNames containsObject:name]) {
+        return [UIImage imageCustomName:name];
+    }
     NSString *img = [NSString stringWithFormat:@"%@/%@",AFBundleManager.shareBundleManager.bundleString,name];
     return [UIImage imageCustomName:img];
 }
 @end
-@interface AFBundleManager ()
-    
-@property (nonatomic, strong) NSString *resourceName ;
-@property (nonatomic, assign) NSInteger type ;
-@property (nonatomic, strong ) NSString *bundleString ;
 
-@end
 
 static const char *_bundlekey = "_bundle_key";
 @interface Language : NSBundle
@@ -73,6 +79,9 @@ static const char *_bundlekey = "_bundle_key";
             self.bundleString = bundle.bundlePath ;
         }
     }
+}
+-(void)setExistenImage:(NSArray<NSString *> *)imageNames{
+    self.imageNames = imageNames ;
 }
 #pragma mark - 国际化版本 -
 -(void)setBundlePath:(NSString *)path type:(NSInteger)type{
