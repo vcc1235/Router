@@ -51,7 +51,10 @@ static VCApiManager *__ApiManager ;
         NSDictionary *valueDictionary = [self.dictioanry valueForKey:classString];
         NSString *host = [valueDictionary valueForKey:@"host"];
         if (host == nil) {
-            host = self.host;
+            host = [objc valueForKey:@"host"];
+            if (host == nil) {
+                host = self.host;
+            }
         }
         unsigned int propertyCount = 0;
         objc_property_t *properties = class_copyPropertyList(object_getClass(objc), &propertyCount);
@@ -69,18 +72,6 @@ static VCApiManager *__ApiManager ;
 
 -(BOOL)loadApiJson:(NSString *)jsonPath{
     
-//    NSError *error ;
-//    NSString *json = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:&error];
-//    if (error) {
-//        return false ;
-//    }
-//    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-//    if (error) {
-//        return  false ;
-//    }
-//    if (![dictionary isKindOfClass:[NSDictionary class]]) {
-//        return false ;
-//    }
     NSDictionary *dictionary = [self readInterfaceValue:jsonPath];
     self.dictioanry = dictionary ;
     [self reloadApi];
@@ -114,7 +105,7 @@ static VCApiManager *__ApiManager ;
     NSString *jsonStr = allStr;
     while ([myScanner isAtEnd] == NO) {
         //开始扫描
-        [myScanner scanUpToString:@"//" intoString:NULL];
+        [myScanner scanUpToString:@"##" intoString:NULL];
         [myScanner scanUpToString:@"\n" intoString:&annotStr];
         //将结果替换
         //注意 这样写jsonStr =  [jsonStr stringByReplacingOccurrencesOfString:annotStr withString:@""]; 无法区分json中的”// 事项“和”// 事项备注“ 两个注释

@@ -16,7 +16,9 @@
 
 
 @implementation UserApi
-
+-(NSString *)host{
+    return @"http://ww.api0.com";
+}
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
     

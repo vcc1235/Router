@@ -20,11 +20,11 @@
     // Do any additional setup after loading the view.
     
     NSString *jsonPath = [NSBundle.mainBundle pathForResource:@"ApiJson" ofType:@"json"];
-    NSString *local = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
-    local = [local stringByAppendingPathComponent:@"api"];
-    NSString *json = [local stringByAppendingString:@"/ApiJson.json"];
-    [SSZipArchive unzipFileAtPath:jsonPath toDestination:local overwrite:true password:@"94264546" error:nil];
-    BOOL islogin = [ApiShare.shareInstance loadApiJson:json];
+//    NSString *local = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
+//    local = [local stringByAppendingPathComponent:@"api"];
+//    NSString *json = [local stringByAppendingString:@"/ApiJson.json"];
+//    [SSZipArchive unzipFileAtPath:jsonPath toDestination:local overwrite:true password:@"94264546" error:nil];
+    BOOL islogin = [ApiShare.shareInstance loadApiJson:jsonPath];
     if (!islogin) {
         return ;
     }
