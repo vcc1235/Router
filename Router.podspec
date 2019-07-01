@@ -127,7 +127,7 @@ Pod::Spec.new do |spec|
   	ss.source_files = 'Router/Router/' + 'Router/Router{.h,.m}'
   end
   spec.subspec 'ApiManager' do |ss|
-    ss.source_files = 'Router/Router'+'ApiManager/VCRApi*{.h,.m}'
+    ss.source_files = 'Router/Router'+'ApiManager/VCApi*{.h,.m}'
   end
 
 
