@@ -126,6 +126,9 @@ Pod::Spec.new do |spec|
   spec.subspec 'Router' do |ss|
   	ss.source_files = 'Router/Router/' + 'Router/Router{.h,.m}'
   end
+  spec.subspec 'ApiManager' do |ss|
+    ss.source_files = 'Router/Router'+'ApiManager/VCRApi*{.h,.m}'
+  end
 
 
   # spec.framework  = "SomeFramework"
