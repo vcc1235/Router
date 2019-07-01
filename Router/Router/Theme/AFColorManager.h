@@ -11,7 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFColorManager : NSObject
-
 /// 单例模式
 +(instancetype)shareInstance ;
 /// 加载数据模型   json ///文件路径

@@ -38,6 +38,9 @@ typedef void(^RTCompletion)(NSError * __nullable error, id __nullable obj);
 @required
 -(NSString *)host ;
 
+/**
+ 检测是否为登录状态
+ */
 -(BOOL)isLogin ;
 
 @optional

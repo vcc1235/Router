@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81F8A9E22C9EF1E007CE4CE /* VCApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F8A9D22C9EF1E007CE4CE /* VCApiManager.m */; };
+		B81F8AA122C9F531007CE4CE /* ApiShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F8AA022C9F531007CE4CE /* ApiShare.m */; };
+		B81F8AA322C9F684007CE4CE /* ApiJson.json in Resources */ = {isa = PBXBuildFile; fileRef = B81F8AA222C9F684007CE4CE /* ApiJson.json */; };
+		B81F8AC722CA1F6E007CE4CE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B81F8AC622CA1F6E007CE4CE /* libz.tbd */; };
 		B823C2022296696B00F5AEBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C2012296696B00F5AEBC /* AppDelegate.m */; };
 		B823C2052296696B00F5AEBC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C2042296696B00F5AEBC /* ViewController.m */; };
 		B823C2082296696B00F5AEBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B823C2062296696B00F5AEBC /* Main.storyboard */; };
@@ -16,9 +20,18 @@
 		B823C2182296699600F5AEBC /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C2172296699600F5AEBC /* Router.m */; };
 		B823C22322966FA400F5AEBC /* AFBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B823C22222966FA400F5AEBC /* AFBundleManager.m */; };
 		B85689B62296A86300D5C416 /* AFColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B85689B52296A86300D5C416 /* AFColorManager.m */; };
+		E1FE2CB798E9AF6E7EC271FC /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A01AF0A6B58C37282CECFC8 /* Pods_Router.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A01AF0A6B58C37282CECFC8 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20E10D8A32A79281E1127AA7 /* Pods-Router.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.debug.xcconfig"; path = "Target Support Files/Pods-Router/Pods-Router.debug.xcconfig"; sourceTree = "<group>"; };
+		B81F8A9C22C9EF1E007CE4CE /* VCApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCApiManager.h; sourceTree = "<group>"; };
+		B81F8A9D22C9EF1E007CE4CE /* VCApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCApiManager.m; sourceTree = "<group>"; };
+		B81F8A9F22C9F531007CE4CE /* ApiShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiShare.h; sourceTree = "<group>"; };
+		B81F8AA022C9F531007CE4CE /* ApiShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiShare.m; sourceTree = "<group>"; };
+		B81F8AA222C9F684007CE4CE /* ApiJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ApiJson.json; sourceTree = "<group>"; };
+		B81F8AC622CA1F6E007CE4CE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B823C1FD2296696B00F5AEBC /* Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Router.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B823C2002296696B00F5AEBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B823C2012296696B00F5AEBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,6 +49,7 @@
 		B823C22422967E1E00F5AEBC /* Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
 		B85689B42296A86300D5C416 /* AFColorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFColorManager.h; sourceTree = "<group>"; };
 		B85689B52296A86300D5C416 /* AFColorManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFColorManager.m; sourceTree = "<group>"; };
+		CE697BCB6A410EEAB4E2586F /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +57,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81F8AC722CA1F6E007CE4CE /* libz.tbd in Frameworks */,
+				E1FE2CB798E9AF6E7EC271FC /* Pods_Router.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B43D1AD5B0F6B0C2F901689 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20E10D8A32A79281E1127AA7 /* Pods-Router.debug.xcconfig */,
+				CE697BCB6A410EEAB4E2586F /* Pods-Router.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B81F8A9B22C9EF09007CE4CE /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				B81F8A9C22C9EF1E007CE4CE /* VCApiManager.h */,
+				B81F8A9D22C9EF1E007CE4CE /* VCApiManager.m */,
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
 		B823C1F42296696B00F5AEBC = {
 			isa = PBXGroup;
 			children = (
 				B823C1FF2296696B00F5AEBC /* Router */,
 				B823C1FE2296696B00F5AEBC /* Products */,
+				3B43D1AD5B0F6B0C2F901689 /* Pods */,
+				C872436EE7F6DA99BA20CCE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,7 +108,11 @@
 				B823C2012296696B00F5AEBC /* AppDelegate.m */,
 				B823C2032296696B00F5AEBC /* ViewController.h */,
 				B823C2042296696B00F5AEBC /* ViewController.m */,
+				B81F8A9F22C9F531007CE4CE /* ApiShare.h */,
+				B81F8AA022C9F531007CE4CE /* ApiShare.m */,
+				B81F8AA222C9F684007CE4CE /* ApiJson.json */,
 				B823C22422967E1E00F5AEBC /* Router.h */,
+				B81F8A9B22C9EF09007CE4CE /* ApiManager */,
 				B823C21A229669C800F5AEBC /* Theme */,
 				B823C219229669C000F5AEBC /* Router */,
 				B823C2062296696B00F5AEBC /* Main.storyboard */,
@@ -104,6 +144,15 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		C872436EE7F6DA99BA20CCE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B81F8AC622CA1F6E007CE4CE /* libz.tbd */,
+				1A01AF0A6B58C37282CECFC8 /* Pods_Router.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B823C2132296696D00F5AEBC /* Build configuration list for PBXNativeTarget "Router" */;
 			buildPhases = (
+				7BB9B978DC65AEAA8A19F979 /* [CP] Check Pods Manifest.lock */,
 				B823C1F92296696B00F5AEBC /* Sources */,
 				B823C1FA2296696B00F5AEBC /* Frameworks */,
 				B823C1FB2296696B00F5AEBC /* Resources */,
+				B81F8AA422C9FC8D007CE4CE /* ShellScript */,
+				3F7D7C9882022602B7619AAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +182,9 @@
 		B823C1F52296696B00F5AEBC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = aletevcc;
 				TargetAttributes = {
@@ -161,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81F8AA322C9F684007CE4CE /* ApiJson.json in Resources */,
 				B823C20D2296696D00F5AEBC /* LaunchScreen.storyboard in Resources */,
 				B823C20A2296696D00F5AEBC /* Assets.xcassets in Resources */,
 				B823C2082296696B00F5AEBC /* Main.storyboard in Resources */,
@@ -169,6 +225,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F7D7C9882022602B7619AAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Router/Pods-Router-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Router/Pods-Router-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Router/Pods-Router-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BB9B978DC65AEAA8A19F979 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Router-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B81F8AA422C9FC8D007CE4CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#!/bin/bash\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B823C1F92296696B00F5AEBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -176,8 +291,10 @@
 			files = (
 				B823C22322966FA400F5AEBC /* AFBundleManager.m in Sources */,
 				B823C2182296699600F5AEBC /* Router.m in Sources */,
+				B81F8AA122C9F531007CE4CE /* ApiShare.m in Sources */,
 				B823C2052296696B00F5AEBC /* ViewController.m in Sources */,
 				B85689B62296A86300D5C416 /* AFColorManager.m in Sources */,
+				B81F8A9E22C9EF1E007CE4CE /* VCApiManager.m in Sources */,
 				B823C2102296696D00F5AEBC /* main.m in Sources */,
 				B823C2022296696B00F5AEBC /* AppDelegate.m in Sources */,
 			);
@@ -319,6 +436,7 @@
 		};
 		B823C2142296696D00F5AEBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E10D8A32A79281E1127AA7 /* Pods-Router.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +454,7 @@
 		};
 		B823C2152296696D00F5AEBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE697BCB6A410EEAB4E2586F /* Pods-Router.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
